@@ -24,7 +24,7 @@ clean:
 
 $(ID_NAME).s9pk: manifest.yaml docs/instructions.md icon.png LICENSE scripts/embassy.js docker-images/aarch64.tar docker-images/x86_64.tar
 	@if ! [ -z "$(ARCH)" ]; then cp docker-images/$(ARCH).tar image.tar; echo "* image.tar compiled for $(ARCH)"; fi
-	embassy-sdk pack
+	start-sdk pack
 
 docker-images/aarch64.tar: Dockerfile docker_entrypoint.sh agora/target/aarch64-unknown-linux-musl/release/agora
 	mkdir -p docker-images
