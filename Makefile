@@ -9,10 +9,10 @@ AGORA_SRC := $(shell find ./agora/src) agora/Cargo.toml agora/Cargo.lock
 all: verify
 
 install: all
-	embassy-cli package install $(ID_NAME).s9pk
+	start-cli package install $(ID_NAME).s9pk
 
 verify: $(ID_NAME).s9pk
-	@embassy-sdk verify s9pk $(ID_NAME).s9pk
+	@start-sdk verify s9pk $(ID_NAME).s9pk
 	@echo " Done!"
 	@echo "   Filesize: $(shell du -h $(ID_NAME).s9pk) is ready"
 
