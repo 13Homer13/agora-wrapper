@@ -51,12 +51,6 @@ volumes:
     volume-id: main
     path: /data
     readonly: false
-  lnd:
-    type: pointer
-    package-id: lnd
-    volume-id: main
-    path: /public
-    readonly: false
   c-lightning:
     type: pointer
     package-id: c-lightning
@@ -89,7 +83,7 @@ dependencies:
     version: ">=0.11.1 <24.00.0"
     description: Used to communicate with the Lightning Network.
     requirement:
-      type: "opt-in"
+      type: required
       how: Can opt to use the CLN instance instead of LND
     config: ~
 backup:
