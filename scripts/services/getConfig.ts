@@ -25,21 +25,6 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
    "name": "Lightning Settings",
    "description": "Choose which Lightning implementation you want to use, whether you want to enable payments and for how much, or maybe host files for free.",
    "spec": {
-      "wallet": {
-         "name": "Select Lightning Node",
-         "description":
-           "Choose which Lightning node you want to use for payments.",
-         "type": "enum",
-         "values": [
-           "lnd",
-           "cln",
-         ],
-         "value-names": {
-           "lnd": "Lightning Network Daemon (LND)",
-           "cln": "Core Lightning (CLN)",
-         },
-         "default": "lnd",
-       },
        "payments": {
          "type": "boolean",
          "name": "Enable payments",
