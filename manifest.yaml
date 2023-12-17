@@ -27,7 +27,6 @@ main:
   args: []
   mounts:
     main: /root
-    lnd: /mnt/lnd
     c-lightning: /mnt/c-lightning
     filebrowser: /mnt/filebrowser
   io-format: yaml
